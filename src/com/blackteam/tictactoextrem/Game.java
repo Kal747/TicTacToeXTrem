@@ -55,6 +55,8 @@ public class Game {
 				System.out.println(this);
 				
 				// On recupère un evenement (onClick) : ATTENTION VERIFIER SI GAME LAUNCHED
+				
+				break; // Le temps d'attendre le truc de Frank
 			}
 			gameLaunched = false;
 			
