@@ -1,7 +1,5 @@
 package com.blackteam.tictactoextrem;
 
-import java.util.Arrays;
-
 public class Grid {
 
 	private int[][] grid = new int[3][3];
