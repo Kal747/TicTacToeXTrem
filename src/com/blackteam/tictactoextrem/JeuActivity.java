@@ -3,6 +3,7 @@ package com.blackteam.tictactoextrem;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,10 @@ public class JeuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//onSaveInstanceState(savedInstanceState);
+
 		setContentView(R.layout.activity_jeu);
+
 	}
 
 	@Override
@@ -28,6 +32,7 @@ public class JeuActivity extends Activity {
 		Intent intent = new Intent(JeuActivity.this, MenuPrincipal.class);
 		startActivity(intent);
 		finish();
+		
 	}
 
 	public void onClickButtonSquare(View view) {
@@ -35,14 +40,17 @@ public class JeuActivity extends Activity {
 		String tag= view.getTag().toString();
 		int x = Integer.parseInt(""+tag.charAt(0));
 		int y = Integer.parseInt(""+tag.charAt(1));
-		
 		// Si incorrect ou jeu fini : 0
 		int jouerId = MainActivity.game.put(x, y);
-
 		if(jouerId != 0) {
-			((Button)view).setText("" + jouerId);
+			 
+			
+			if(jouerId==1)
+				((Button)view).setBackgroundResource(R.drawable.  croixfini);
+			else 
+				((Button)view).setBackgroundResource(R.drawable.  rondfini);
 		}
-
+		System.out.println(MainActivity.game);
 	}
 
 }

@@ -22,6 +22,7 @@
         <Button
             android:id="@+id/square_0_0"
             android:text=""
+            android:textSize="70sp"
             android:tag="00"
             android:onClick="onClickButtonSquare" >
         </Button>
@@ -29,6 +30,7 @@
         <Button
             android:id="@+id/square_0_1"
             android:text="" 
+             android:textSize="70sp"
             android:tag="01"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -36,6 +38,7 @@
         <Button
             android:id="@+id/square_0_2"
             android:text="" 
+             android:textSize="70sp"
             android:tag="02"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -46,6 +49,7 @@
         <Button
             android:id="@+id/square_1_0"
             android:text="" 
+             android:textSize="70sp"
             android:tag="10"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -53,6 +57,7 @@
         <Button
             android:id="@+id/square_1_1"
             android:text="" 
+             android:textSize="70sp"
             android:tag="11"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -60,6 +65,7 @@
         <Button
             android:id="@+id/square_1_2"
             android:text="" 
+             android:textSize="70sp"
             android:tag="12"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -70,6 +76,7 @@
         <Button
             android:id="@+id/square_2_0"
             android:text="" 
+             android:textSize="70sp"
             android:tag="20"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -77,6 +84,7 @@
         <Button
             android:id="@+id/square_2_1"
             android:text="" 
+             android:textSize="70sp"
             android:tag="21"
             android:onClick="onClickButtonSquare">
         </Button>
@@ -84,6 +92,7 @@
         <Button
             android:id="@+id/square_2_2"
             android:text="" 
+             android:textSize="70sp"
             android:tag="22"
              android:onClick="onClickButtonSquare">
         </Button>
