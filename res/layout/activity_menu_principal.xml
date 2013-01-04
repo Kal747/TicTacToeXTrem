@@ -9,6 +9,12 @@
         android:layout_height="wrap_content"
         android:text="Jouer en local"
         android:onClick="onClickButtonJouerEnLocal" />
+    
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Jouer en bluetooth"
+        android:onClick="onClickButtonJouerEnBluetooth" />
 
     <Button
         android:layout_width="fill_parent"

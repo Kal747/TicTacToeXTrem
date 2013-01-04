@@ -3,14 +3,17 @@ package com.blackteam.tictactoextrem;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 
 import android.view.Menu;
 
 public class MainActivity extends Activity {
  
-	 
+	
 	private Handler mHandler = new Handler();
+	
+	static BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
  
 	public static Game game = new Game();
 
