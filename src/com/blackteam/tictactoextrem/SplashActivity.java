@@ -1,11 +1,10 @@
 package com.blackteam.tictactoextrem;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Activity;
 import android.view.Menu;
-import android.view.View;
-import android.content.Intent;
 
 public class SplashActivity extends Activity {
 
@@ -28,7 +27,7 @@ public class SplashActivity extends Activity {
 	private Runnable mUpdateTimeTask = new Runnable() {
 		  public void run() {
 			 Intent intent = new Intent(SplashActivity.this, MenuPrincipal.class);
-			startActivity(intent);
+			 startActivity(intent);
 		     finish();
 		  }
 		};
