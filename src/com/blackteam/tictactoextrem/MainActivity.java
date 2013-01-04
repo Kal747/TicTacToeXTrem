@@ -3,18 +3,18 @@ package com.blackteam.tictactoextrem;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+
 import android.view.Menu;
 
 public class MainActivity extends Activity {
 
-	private Handler mHandler ;
+	 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_splash);
-		mHandler = new Handler();
-		mHandler.postDelayed(mUpdateTimeTask, 2000);
+		setContentView(R.layout.activity_main);
+		
 	}
 
 	@Override
@@ -24,10 +24,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	private Runnable mUpdateTimeTask = new Runnable() {
-	  public void run() {
-	     setContentView(R.layout.activity_menu_principal );
-	  }
-	};
+	
 
 }
