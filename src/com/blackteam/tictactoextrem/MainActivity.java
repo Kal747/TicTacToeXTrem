@@ -18,7 +18,6 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
- 
 		setContentView(R.layout.activity_main);
 		mHandler = new Handler();
 		mHandler.postDelayed(mUpdateTimeTask, 5000);

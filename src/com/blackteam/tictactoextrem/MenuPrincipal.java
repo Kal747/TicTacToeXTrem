@@ -3,6 +3,7 @@ package com.blackteam.tictactoextrem;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 
@@ -33,6 +34,9 @@ public class MenuPrincipal extends Activity {
 	public void onClickButtonJouerEnLocal(View view) {
 	    System.out.println("onClickButtonJouerEnLocal");
 	    MainActivity.game.launch();
+	    Intent intent = new Intent(MenuPrincipal.this, JeuActivity.class);
+		 startActivity(intent);
+	     finish();
 	    // Affichage de la nouvelle activité
 	    // Masquer le menu principal (le détruire ?)
 	}
