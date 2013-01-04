@@ -77,6 +77,14 @@ public class Game {
 			return 0;
 		}
 	}
+	
+	public int winner() {
+		if (!this.grid.isOver()) {
+			return -1;
+		} else {
+			return this.grid.winner();
+		}
+	}
 
 	public String toString() {
 		String string = grid.toString();

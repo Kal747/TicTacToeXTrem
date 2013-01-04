@@ -27,6 +27,30 @@ public class Grid {
 			}
 		}
 	}
+	
+	public int winner() {
+		if (this.hasWinnerLine()) {
+			if ((this.grid[0][0] != 0) && (this.grid[0][0] == this.grid[0][1] && this.grid[0][1] == this.grid[0][2])) {
+				return this.grid[0][0];
+			} else if ((this.grid[1][0] != 0) && (this.grid[1][0] == this.grid[1][1] && this.grid[1][1] == this.grid[1][2])) {
+				return this.grid[1][0];
+			} else {
+				return this.grid[2][0];
+			}
+		} else if (this.hasWinnerColumn()) {
+			if ((this.grid[0][0] != 0) && (this.grid[0][0] == this.grid[1][0] && this.grid[1][0] == this.grid[2][0])) {
+				return this.grid[0][0];
+			} else if ((this.grid[0][1] != 0) && (this.grid[0][1] == this.grid[1][1] && this.grid[1][1] == this.grid[2][1])) {
+				return this.grid[0][1];
+			} else {
+				return this.grid[0][2];
+			}
+		} else if (this.hasWinnerDiagonal()) {
+			return this.grid[1][1];
+		} else {
+			return 0;
+		}
+	}
 
 	public boolean hasWinnerLine() {
 		return
