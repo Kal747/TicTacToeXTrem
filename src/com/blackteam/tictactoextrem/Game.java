@@ -28,6 +28,14 @@ public class Game {
 		this.players = players;
 	}
 	
+	public boolean isGameLaunched() {
+		return gameLaunched;
+	}
+
+	public void setGameLaunched(boolean gameLaunched) {
+		this.gameLaunched = gameLaunched;
+	}
+
 	public void launch() {
 		// Variables locales
 		boolean stop = false;
