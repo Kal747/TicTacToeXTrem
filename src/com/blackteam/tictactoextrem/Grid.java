@@ -52,33 +52,44 @@ public class Grid {
 	}
 
 	public boolean isOver() {
-		return (this.hasWinnerLine() || this.hasWinnerColumn() || this.hasWinnerDiagonal());
+		return (this.hasWinnerLine() || this.hasWinnerColumn() || this.hasWinnerDiagonal() || this.isCompleted());
 	}
 
-	@Override
-	public String toString() {
-		String string = "<Grid>\n";
-		for (int[] line : grid) {
-			for (int square : line) {
-				string += "" + square + " ";
+	public boolean isCompleted() {
+		for(int i=0; i< 3; i++){
+			for(int j=0; i<3; j++){
+				if(this.grid[i][j] !=0){	
+					return false;
+				}
 			}
-			string += "\n";
 		}
-		string += "</Grid>\n";
-		return string;
+		return true;
 	}
 
-	public boolean isempty(int x, int y) {
-		return this.grid[x][y] == 0;
-	}
-	
-	public boolean put(int id, int x, int y) {
-		if (this.isempty(x, y)) {
-			this.grid[x][y] = id;
-			return true;
-		} else {
-			return false;
+@Override
+public String toString() {
+	String string = "<Grid>\n";
+	for (int[] line : grid) {
+		for (int square : line) {
+			string += "" + square + " ";
 		}
+		string += "\n";
 	}
+	string += "</Grid>\n";
+	return string;
+}
+
+public boolean isempty(int x, int y) {
+	return this.grid[x][y] == 0;
+}
+
+public boolean put(int id, int x, int y) {
+	if (this.isempty(x, y)) {
+		this.grid[x][y] = id;
+		return true;
+	} else {
+		return false;
+	}
+}
 
 }

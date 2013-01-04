@@ -44,7 +44,6 @@ public class JeuActivity extends Activity {
 		int jouerId = MainActivity.game.put(x, y);
 		if(jouerId != 0) {
 			 
-			
 			if(jouerId==1)
 				((Button)view).setBackgroundResource(R.drawable.  croixfini);
 			else 
@@ -52,5 +51,11 @@ public class JeuActivity extends Activity {
 		}
 		System.out.println(MainActivity.game);
 	}
+	
+	 
+	 
+	   
+	     
+	
 
 }
