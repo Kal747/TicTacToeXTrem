@@ -10,6 +10,7 @@ public class MenuPrincipal extends Activity {
 	
 	private Handler _mHandler = new Handler();
 	
+	// Quitte l'application
 	private Runnable _stop = new Runnable() {
 		public void run() {
 			System.exit(RESULT_OK);
@@ -30,7 +31,9 @@ public class MenuPrincipal extends Activity {
 	}
 	
 	public void onClickButtonJouerEnLocal(View view) {
-	    System.out.println("Boutton jouer en local");
+	    System.out.println("onClickButtonJouerEnLocal");
+	    // Affichage de la nouvelle activité
+	    // Masquer le menu principal (le détruire ?)
 	}
 	
 	public void onClickButtonQuitter(View view) {
