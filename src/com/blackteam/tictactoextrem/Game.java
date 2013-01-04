@@ -83,6 +83,7 @@ public class Game {
 		string += Arrays.toString(players) + "\n";
 		string += "</Players>\n";
 		string += "Current Player : " + this.currentPlayer + "\n";
+		string += "Game Launched : " + this.gameLaunched + "\n";
 		return string;
 	}
 
