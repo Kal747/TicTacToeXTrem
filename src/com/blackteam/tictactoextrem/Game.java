@@ -64,9 +64,10 @@ public class Game {
 		if (this.gameLaunched) {
 			int player = players[currentPlayer].getId();
 			if (this.grid.put(player, x, y)) {
-				this.currentPlayer = (this.currentPlayer + 1) % 2;
 				if (this.grid.isOver()) {
 					this.gameLaunched = false;
+				} else {
+					this.currentPlayer = (this.currentPlayer + 1) % 2;
 				}
 				return player;
 			} else {
