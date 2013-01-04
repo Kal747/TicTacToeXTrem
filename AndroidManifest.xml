@@ -22,12 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--
         <activity
             android:name="com.blackteam.tictactoextrem.MenuPrincipal"
             android:label="@string/title_activity_menu_principal" >
         </activity>
-        -->
         <activity
             android:name="com.blackteam.tictactoextrem.SplashActivity"
             android:label="@string/title_activity_splash" >
