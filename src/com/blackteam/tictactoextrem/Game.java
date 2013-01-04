@@ -58,6 +58,7 @@ public class Game {
 		currentPlayer = (lastWinner == 0) ? 1 : 0;
 			
 		gameLaunched = true;
+		System.out.println(this);
 	}
 	
 	public boolean put(int x, int y) {
@@ -65,6 +66,7 @@ public class Game {
 			boolean put = this.grid.put(currentPlayer, x, y);
 			if (put) {
 				this.currentPlayer = (this.currentPlayer + 1) % 2;
+				System.out.println(this);
 			}
 			if (this.grid.isOver()) {
 				this.gameLaunched = false;
@@ -82,6 +84,7 @@ public class Game {
 		string += "<Players>\n";
 		string += Arrays.toString(players) + "\n";
 		string += "</Players>\n";
+		string += "Current Player : " + this.currentPlayer + "\n";
 		return string;
 	}
 
