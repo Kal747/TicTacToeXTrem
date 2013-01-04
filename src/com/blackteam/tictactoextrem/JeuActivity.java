@@ -48,6 +48,8 @@ public class JeuActivity extends Activity {
 				((Button)view).setBackgroundResource(R.drawable.  croixfini);
 			else 
 				((Button)view).setBackgroundResource(R.drawable.  rondfini);
+		} else {
+			MainActivity.vi.vibrate(500);
 		}
 		System.out.println(MainActivity.game);
 	}

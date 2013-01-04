@@ -2,8 +2,10 @@ package com.blackteam.tictactoextrem;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.Intent;
 
 import android.view.Menu;
@@ -13,15 +15,20 @@ public class MainActivity extends Activity {
 	
 	private Handler mHandler = new Handler();
 	
-	static BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+	static Vibrator vi;
+	static BluetoothAdapter mBluetoothAdapter;
  
-	public static Game game = new Game();
+	public static Game game;
 
  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		MainActivity.vi = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+		MainActivity.mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+		MainActivity.game = new Game();
 		mHandler = new Handler();
 		mHandler.postDelayed(mUpdateTimeTask, 2000);
 	}
