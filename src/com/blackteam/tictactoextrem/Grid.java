@@ -29,6 +29,10 @@ public class Grid {
 			}
 		}
 	}
+	
+	public boolean isOver() {
+		return true;
+	}
 
 	@Override
 	public String toString() {
