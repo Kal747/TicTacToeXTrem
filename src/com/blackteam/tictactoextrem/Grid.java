@@ -70,4 +70,17 @@ public class Grid {
 		return string;
 	}
 
+	public boolean isempty(int x, int y) {
+		return this.grid[x][y] == 0;
+	}
+	
+	public boolean put(int id, int x, int y) {
+		if (this.isempty(x, y)) {
+			this.grid[x][y] = id;
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }

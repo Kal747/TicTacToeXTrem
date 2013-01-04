@@ -7,6 +7,7 @@ public class Game {
 	private Grid grid;
 	private Player[] players = new Player[2];
 	private boolean gameLaunched = false;
+	private int currentPlayer;
 	
 	public Game() {
 		grid = new Grid();		
@@ -36,17 +37,22 @@ public class Game {
 		this.gameLaunched = gameLaunched;
 	}
 
+	public int getCurrentPlayer() {
+		return currentPlayer;
+	}
+
+	public void setCurrentPlayer(int currentPlayer) {
+		this.currentPlayer = currentPlayer;
+	}
+
 	public void launch() {
 		// Variables locales
 		boolean stop = false;
 		int lastWinner = 1; // Le gagnant ne commence pas
-		int currentPlayer;
 		
 		// Ajout des joueurs
 		players[0] = new Player(1, "Joueur 1");
 		players[1] = new Player(2, "Joueur 2");
-		
-		// Affichage de la grille de jeu
 		
 		// Bouche infinie du jeu
 		while (true) {
@@ -64,7 +70,7 @@ public class Game {
 				
 				// On recupère un evenement (onClick) : ATTENTION VERIFIER SI GAME LAUNCHED
 				
-				break; // Le temps d'attendre le truc de Frank
+				//break; // Le temps d'attendre le truc de Frank
 			}
 			gameLaunched = false;
 			
@@ -79,6 +85,14 @@ public class Game {
 		}
 		
 		// Masquer la grille de jeu
+	}
+	
+	public boolean put(int x, int y) {
+		boolean put = this.grid.put(currentPlayer, x, y);
+		if (put) {
+			this.currentPlayer = (this.currentPlayer + 1) % 2;
+		}
+		return put;
 	}
 
 	public String toString() {
