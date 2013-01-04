@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
 	
 	private Handler mHandler = new Handler();
 	
-	//static BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+	static BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
  
 	public static Game game = new Game();
 

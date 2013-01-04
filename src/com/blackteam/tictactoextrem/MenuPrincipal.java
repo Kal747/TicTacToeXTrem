@@ -43,12 +43,12 @@ public class MenuPrincipal extends Activity {
 	public void onClickButtonJouerEnBluetooth(View view) {
 		System.out.println("onClickButtonJouerEnBluetooth");
 		
-		/*if (MainActivity.mBluetoothAdapter != null) {
+		if (MainActivity.mBluetoothAdapter != null) {
 			if (!MainActivity.mBluetoothAdapter.isEnabled()) {
 			    Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 			    startActivityForResult(enableBtIntent, 1);
 			}
-		}*/
+		}
 
 	}
 
