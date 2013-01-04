@@ -58,22 +58,16 @@ public class Game {
 		currentPlayer = (lastWinner == 0) ? 1 : 0;
 			
 		gameLaunched = true;
-		System.out.println(this);
 	}
 	
 	public int put(int x, int y) {
 		if (this.gameLaunched) {
 			int player = players[currentPlayer].getId();
-			boolean put = this.grid.put(player, x, y);
-			if (put) {
+			if (this.grid.put(player, x, y)) {
 				this.currentPlayer = (this.currentPlayer + 1) % 2;
-				System.out.println(this);
-				
 				if (this.grid.isOver()) {
 					this.gameLaunched = false;
-					System.out.println("Partie terminée");
 				}
-				
 				return player;
 			} else {
 				return 0;
