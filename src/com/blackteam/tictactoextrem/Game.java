@@ -88,11 +88,15 @@ public class Game {
 	}
 	
 	public boolean put(int x, int y) {
-		boolean put = this.grid.put(currentPlayer, x, y);
-		if (put) {
-			this.currentPlayer = (this.currentPlayer + 1) % 2;
+		if (this.gameLaunched) {
+			boolean put = this.grid.put(currentPlayer, x, y);
+			if (put) {
+				this.currentPlayer = (this.currentPlayer + 1) % 2;
+			}
+			return put;
+		} else {
+			return false;
 		}
-		return put;
 	}
 
 	public String toString() {
