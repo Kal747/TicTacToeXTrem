@@ -21,9 +21,9 @@ public class Grid {
 
 	// Met la grille à 0 (case vide)
 	public void init() {
-		for (int[] line : grid) {
-			for (int square : line) {
-				square = 0;
+		for (int i = 0 ; i <= 2 ; i++) {
+			for (int j = 0 ; j <= 2 ; j++) {
+				this.grid[i][j] = 0;
 			}
 		}
 	}
