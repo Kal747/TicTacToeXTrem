@@ -26,4 +26,9 @@ public class Player {
 		this.id = id;
 		this.nickName = nickName;
 	}
+
+	@Override
+	public String toString() {
+		return "Player [id=" + id + ", nickName=" + nickName + "]";
+	}
 }
