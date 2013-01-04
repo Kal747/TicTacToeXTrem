@@ -20,54 +20,72 @@
     <TableRow>
 
         <Button
-            android:id="@+id/keypad_1"
-            android:text="" >
+            android:id="@+id/square_0_0"
+            android:text=""
+            android:tag="00"
+            android:onClick="onClickButtonSquare" >
         </Button>
 
         <Button
-            android:id="@+id/keypad_2"
-            android:text="" >
+            android:id="@+id/square_0_1"
+            android:text="" 
+            android:tag="01"
+            android:onClick="onClickButtonSquare">
         </Button>
 
         <Button
-            android:id="@+id/keypad_3"
-            android:text="" >
-        </Button>
-    </TableRow>
-
-    <TableRow>
-
-        <Button
-            android:id="@+id/keypad_4"
-            android:text="" >
-        </Button>
-
-        <Button
-            android:id="@+id/keypad_5"
-            android:text="" >
-        </Button>
-
-        <Button
-            android:id="@+id/keypad_6"
-            android:text="" >
+            android:id="@+id/square_0_2"
+            android:text="" 
+            android:tag="02"
+            android:onClick="onClickButtonSquare">
         </Button>
     </TableRow>
 
     <TableRow>
 
         <Button
-            android:id="@+id/keypad_7"
-            android:text="" >
+            android:id="@+id/square_1_0"
+            android:text="" 
+            android:tag="10"
+            android:onClick="onClickButtonSquare">
         </Button>
 
         <Button
-            android:id="@+id/keypad_8"
-            android:text="" >
+            android:id="@+id/square_1_1"
+            android:text="" 
+            android:tag="11"
+            android:onClick="onClickButtonSquare">
         </Button>
 
         <Button
-            android:id="@+id/keypad_9"
-            android:text="" >
+            android:id="@+id/square_1_2"
+            android:text="" 
+            android:tag="12"
+            android:onClick="onClickButtonSquare">
+        </Button>
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/square_2_0"
+            android:text="" 
+            android:tag="20"
+            android:onClick="onClickButtonSquare">
+        </Button>
+
+        <Button
+            android:id="@+id/square_2_1"
+            android:text="" 
+            android:tag="21"
+            android:onClick="onClickButtonSquare">
+        </Button>
+
+        <Button
+            android:id="@+id/square_2_2"
+            android:text="" 
+            android:tag="22"
+             android:onClick="onClickButtonSquare">
         </Button>
     </TableRow>
 
@@ -83,13 +101,6 @@
         android:layout_height="wrap_content"
         android:text="MenuPrincipal"
         android:onClick="onClickButtonMenuPrincipal" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20px"
-        android:text="Quitter" 
-        android:onClick="onClickButtonQuitter"/>
 </LinearLayout>
 
 

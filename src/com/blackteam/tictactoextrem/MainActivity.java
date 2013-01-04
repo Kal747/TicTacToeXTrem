@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mHandler = new Handler();
-		mHandler.postDelayed(mUpdateTimeTask, 5000);
+		mHandler.postDelayed(mUpdateTimeTask, 2000);
 	}
 
 	@Override
