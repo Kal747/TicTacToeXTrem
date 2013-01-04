@@ -61,21 +61,25 @@ public class Game {
 		System.out.println(this);
 	}
 	
-	public boolean put(int x, int y) {
+	public int put(int x, int y) {
 		if (this.gameLaunched) {
-			boolean put = this.grid.put(players[currentPlayer].getId(), x, y);
+			int player = players[currentPlayer].getId();
+			boolean put = this.grid.put(player, x, y);
 			if (put) {
 				this.currentPlayer = (this.currentPlayer + 1) % 2;
 				System.out.println(this);
+				
+				if (this.grid.isOver()) {
+					this.gameLaunched = false;
+					System.out.println("Partie terminée");
+				}
+				
+				return player;
+			} else {
+				return 0;
 			}
-			if (this.grid.isOver()) {
-				this.gameLaunched = false;
-				System.out.println("Partie terminée");
-				// Affichage bouttons
-			}
-			return put;
 		} else {
-			return false;
+			return 0;
 		}
 	}
 
