@@ -63,7 +63,7 @@ public class Game {
 	
 	public boolean put(int x, int y) {
 		if (this.gameLaunched) {
-			boolean put = this.grid.put(currentPlayer, x, y);
+			boolean put = this.grid.put(players[currentPlayer].getId(), x, y);
 			if (put) {
 				this.currentPlayer = (this.currentPlayer + 1) % 2;
 				System.out.println(this);
