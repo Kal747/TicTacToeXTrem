@@ -5,17 +5,12 @@ import java.util.Arrays;
 public class Grid {
 	
 	private int[][] grid = new int[3][3];
-	private Player[] players = new Player[2];
 	
 	public Grid() {
 		super();
 		
 		// Initialisation à 0
-		for (int[] line : grid) {
-			for (int square : line) {
-				square = 0;
-			}
-		}
+		this.init();
 	}
 
 	public int[][] getGrid() {
@@ -25,13 +20,14 @@ public class Grid {
 	public void setGrid(int[][] grid) {
 		this.grid = grid;
 	}
-
-	public Player[] getPlayers() {
-		return players;
-	}
-
-	public void setPlayers(Player[] players) {
-		this.players = players;
+	
+	// Met la grille à 0 (case vide)
+	public void init() {
+		for (int[] line : grid) {
+			for (int square : line) {
+				square = 0;
+			}
+		}
 	}
 
 	@Override
@@ -43,7 +39,6 @@ public class Grid {
 			}
 			string += "\n";
 		}
-		string += Arrays.toString(players) + "\n";
 		string += "</Grid>\n";
 		return string;
 	}

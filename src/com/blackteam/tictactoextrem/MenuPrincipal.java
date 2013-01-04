@@ -32,8 +32,8 @@ public class MenuPrincipal extends Activity {
 	
 	public void onClickButtonJouerEnLocal(View view) {
 	    System.out.println("onClickButtonJouerEnLocal");
-	    Grid grid = new Grid();
-	    System.out.println(grid.toString());
+	    Game game = new Game();
+	    System.out.println(game.toString());
 	    // Affichage de la nouvelle activité
 	    // Masquer le menu principal (le détruire ?)
 	}
