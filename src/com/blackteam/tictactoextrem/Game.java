@@ -64,6 +64,7 @@ public class Game {
 		if (this.gameLaunched) {
 			int player = players[currentPlayer].getId();
 			if (this.grid.put(player, x, y)) {
+				this.grid.isOver();
 				if (this.grid.isOver()) {
 					this.gameLaunched = false;
 				} else {

@@ -8,114 +8,124 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pseudo: " />
+        android:text="" />
 
-   <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/keypad"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:stretchColumns="*" >
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/keypad"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="60"
+        android:orientation="vertical"
+        android:stretchColumns="*" >
 
-    <TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="33" >
 
-        <Button
-            android:id="@+id/square_0_0"
-            android:text=""
-            android:textSize="70sp"
-            android:tag="00"
-            android:onClick="onClickButtonSquare" >
-        </Button>
+            <Button
+                android:id="@+id/square_0_0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="00"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_0_1"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="01"
-            android:onClick="onClickButtonSquare">
-        </Button>
+            <Button
+                android:id="@+id/square_0_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="01"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_0_2"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="02"
-            android:onClick="onClickButtonSquare">
-        </Button>
-    </TableRow>
+            <Button
+                android:id="@+id/square_0_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="02"
+                android:text="" >
+            </Button>
+        </TableRow>
 
-    <TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="33" >
 
-        <Button
-            android:id="@+id/square_1_0"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="10"
-            android:onClick="onClickButtonSquare">
-        </Button>
+            <Button
+                android:id="@+id/square_1_0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="10"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_1_1"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="11"
-            android:onClick="onClickButtonSquare">
-        </Button>
+            <Button
+                android:id="@+id/square_1_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="11"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_1_2"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="12"
-            android:onClick="onClickButtonSquare">
-        </Button>
-    </TableRow>
+            <Button
+                android:id="@+id/square_1_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="12"
+                android:text="" >
+            </Button>
+        </TableRow>
 
-    <TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="33" >
 
-        <Button
-            android:id="@+id/square_2_0"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="20"
-            android:onClick="onClickButtonSquare">
-        </Button>
+            <Button
+                android:id="@+id/square_2_0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="20"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_2_1"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="21"
-            android:onClick="onClickButtonSquare">
-        </Button>
+            <Button
+                android:id="@+id/square_2_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="21"
+                android:text="" >
+            </Button>
 
-        <Button
-            android:id="@+id/square_2_2"
-            android:text="" 
-             android:textSize="70sp"
-            android:tag="22"
-             android:onClick="onClickButtonSquare">
-        </Button>
-    </TableRow>
-
-</TableLayout>
-
-   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+            <Button
+                android:id="@+id/square_2_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:onClick="onClickButtonSquare"
+                android:tag="22"
+                android:text="" >
+            </Button>
+        </TableRow>
+    </TableLayout>
 
     <Button
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MenuPrincipal"
-        android:onClick="onClickButtonMenuPrincipal" />
-</LinearLayout>
+        android:onClick="onClickButtonMenuPrincipal"
+        android:text="@string/jeu_menu_pricipal" />
 
-
-  
-   
-
-
-  
 </LinearLayout>

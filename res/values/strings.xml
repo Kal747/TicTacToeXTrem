@@ -9,4 +9,6 @@
 	<string name="menu_principal_jouer_local">Jouer en local</string>
 	<string name="menu_principal_jouer_bluetooth">Jouer en Bluetooth</string>
 	<string name="menu_principal_quitter">Quitter</string>
+	
+	<string name="jeu_menu_pricipal">Aller au menu principal</string>
 </resources>
