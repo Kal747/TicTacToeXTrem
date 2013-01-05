@@ -28,6 +28,10 @@ public class Grid {
 		}
 	}
 	
+	public int getCase(int x, int y) {
+		return this.grid[x][y];
+	}
+	
 	public int winner() {
 		if (this.hasWinnerLine()) {
 			if ((this.grid[0][0] != 0) && (this.grid[0][0] == this.grid[0][1] && this.grid[0][1] == this.grid[0][2])) {

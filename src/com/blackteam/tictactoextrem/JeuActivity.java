@@ -1,5 +1,7 @@
 package com.blackteam.tictactoextrem;
 
+import java.util.HashMap;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,10 +16,44 @@ public class JeuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//onSaveInstanceState(savedInstanceState);
-
 		setContentView(R.layout.activity_jeu);
+	}
 
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		
+		// On raffraichit la vue
+		Grid grid = MainActivity.game.getGrid();
+		int [] idSquares = {
+				R.id.square_0_0,
+				R.id.square_1_0,
+				R.id.square_2_0,
+				R.id.square_0_1,
+				R.id.square_1_1,
+				R.id.square_2_1,
+				R.id.square_0_2,
+				R.id.square_1_2,
+				R.id.square_2_2
+		};
+		
+		int i=0, x=0, y=0;
+		Button b;
+		
+		for (int id : idSquares) {
+			if (grid.getCase(x, y) != 0) {
+				b = (Button) findViewById(idSquares[i]);
+				b.setBackgroundResource(backgroundOfPlayer(grid.getCase(x, y)));
+			}
+			i++;
+			y = (x == 2) ? y+1 : y;
+			x = (x+1) % 3;
+		}		
 	}
 
 	@Override
@@ -26,14 +62,23 @@ public class JeuActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_jeu, menu);
 		return true;
 	}
-	 
 
 	public void onClickButtonMenuPrincipal(View view) {
 		System.out.println("onClickButtonMenuPrincipal");
 		Intent intent = new Intent(JeuActivity.this, MenuPrincipal.class);
 		startActivity(intent);
 		finish();
-
+	}
+	
+	public int backgroundOfPlayer(int id) {
+		switch (id) {
+		case 1:
+			return R.drawable.croixfini;
+		case 2:
+			return R.drawable.rondfini;
+		default:
+			return 0;
+		}
 	}
 
 	public void onClickButtonSquare(View view) {
@@ -43,12 +88,8 @@ public class JeuActivity extends Activity {
 		int y = Integer.parseInt(""+tag.charAt(1));
 		// Si incorrect ou jeu fini : 0
 		int jouerId = MainActivity.game.put(x, y);
-		if(jouerId != 0) {
-
-			if(jouerId==1)
-				((Button)view).setBackgroundResource(R.drawable.  croixfini);
-			else 
-				((Button)view).setBackgroundResource(R.drawable.  rondfini);
+		if(backgroundOfPlayer(jouerId) != 0) {
+			((Button)view).setBackgroundResource(backgroundOfPlayer(jouerId));
 		} else {
 			MainActivity.vi.vibrate(500);
 		}

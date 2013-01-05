@@ -7,19 +7,19 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Jouer en local"
+        android:text="@string/menu_principal_jouer_local"
         android:onClick="onClickButtonJouerEnLocal" />
     
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Jouer en bluetooth"
+        android:text="@string/menu_principal_jouer_bluetooth"
         android:onClick="onClickButtonJouerEnBluetooth" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="20px"
-        android:text="Quitter" 
+        android:text="@string/menu_principal_quitter" 
         android:onClick="onClickButtonQuitter"/>
 </LinearLayout>
