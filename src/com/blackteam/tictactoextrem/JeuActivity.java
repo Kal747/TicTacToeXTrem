@@ -1,7 +1,5 @@
 package com.blackteam.tictactoextrem;
 
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
